@@ -1,0 +1,209 @@
+body {
+    font-family: circular-spotify-ui,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+}
+
+@media (min-width: 768px) {
+    .bursts-hero {
+        background: url("/static/img/background2.svg") no-repeat !important;
+        background-size: 90% !important;
+        background-position: right 40% center !important;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+}
+
+.bursts-hero {
+    height: 100vh;
+    text-align: center;
+    background: url("/static/img/background.svg") no-repeat;
+    background-size: 195%;
+    background-position: top 25% center;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: flex;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.error{
+    color: red;
+}
+
+.login-header{
+    padding: 10%;
+    padding-left: 27% !important;
+    padding-right: 27% !important;
+}
+
+.navbar {
+    background: white;
+}
+
+.nav-link{
+    color: gray !important;
+    margin-right: 1em !important;
+    font-size: small;
+}
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.principal{
+    font-size: 70px;
+    font-weight: 100;
+    letter-spacing: -0.04em !important;
+    font-family: circular-spotify-ui,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+}
+
+.dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.content {
+    margin-top: 10%;
+    padding-bottom: 10% !important;
+}
+
+.parent {
+    display: grid;
+    grid-gap: 4% 2%;
+    grid-template-columns: 32% 32% 32%;
+}
+
+.card {
+    padding: 10px;
+    border: white !important;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background: lightcyan;
+}
+
+.gato div {
+    float: left;
+}
+
+.company_logo {
+    align-self: center;
+    height: 120px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.logo {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.modal-dialog {
+    margin-left: 2% !important;
+    margin-top: 7% !important;
+    color: white;
+    width: 20% !important;
+}
+
+.modal-content {
+    opacity: 0.6;
+    background-color: limegreen !important;
+    box-shadow: 5px 10px 18px lightgray;
+}
+
+.navbar {
+    box-shadow: 5px 10px 18px lightcyan;
+}
+
+.card {
+    box-shadow: 5px 10px 18px #ebf8f8;
+}
+
+.nav-link {
+    font-size: initial !important;
+    white-space: nowrap;
+}
+
+.btn-outline-primary {
+    color: white !important;
+    border-color: transparent !important;
+    background-color: #00a8f3 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: lightcyan !important;
+}
+
+.input-group {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.login-header {
+    padding-top: initial !important;
+}
+
+#carouselExampleIndicators {
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+}
+
+.about_title {
+    color: #2D46B9;
+    font-weight: revert;
+}
+
+.about_description {
+    font-style: italic;
+    font-size: large;
+}
+
+.employee {
+    padding-bottom: 5%;
+    display: flex;
+}
+
+.employee_description {
+    padding-left: 5%;
+}
+
+.end_section {
+    margin-top: 5%;
+    padding: 10%;
+    background: #00a8f3 !important;
+    color: white;
+}
+
+.card-title{
+    font-weight: bolder;
+    color: #0378cc;
+}
+
+.card-body-1 {
+    height: 150px !important;
+    overflow: hidden !important;
+}
+
+.remote_text{
+    font-size: smaller !important;
+    color: #ff7f50;
+    font-weight: bold;
+}
+
+.remote{
+    padding-bottom: 1%;
+}
