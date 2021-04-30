@@ -16,7 +16,7 @@ body {
 .bursts-hero {
     height: 100vh;
     text-align: center;
-    background: url("/static/img/background.svg") no-repeat;
+    background: url("img/background.svg") no-repeat;
     background-size: 195%;
     background-position: top 25% center;
     display: -moz-flex;
