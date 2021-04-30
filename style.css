@@ -62,8 +62,8 @@ body {
 .navbar-collapse{ justify-content: flex-end;}
 
 .principal{
-    font-size: 70px;
-    font-weight: 100;
+    font-size: 50px;
+    font-weight: 70;
     letter-spacing: -0.04em !important;
     font-family: circular-spotify-ui,Helvetica Neue,Helvetica,Arial,sans-serif !important;
 }
