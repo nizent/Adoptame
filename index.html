@@ -23,23 +23,6 @@
           <input type="search" class="form-control rounded" placeholder="Busca una oferta"/>
           <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-4">
-
-                {% block navbar %}
-                    {% if not request.user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'we' %}">Nosotros</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'company_login' %}">Empresas</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Ingresar</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Regístrate</a></li>
-                    {% endif %}
-                {% endblock %}
-            </ul>
-        </div>
     </nav>
     <!-- END Navbar -->
     <section class="bursts-hero">
