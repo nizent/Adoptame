@@ -63,6 +63,7 @@ body {
 
 .principal{
     margin-left:-200px;
+    text-align: left;
     font-size: 20px;
     font-weight: 30;
     letter-spacing: -0.04em !important;
