@@ -4,7 +4,7 @@ body {
 
 @media (min-width: 768px) {
     .bursts-hero {
-        background: url("img/background2.svg") no-repeat !important;
+        background: url("img/depositphotos_72702831-stock-illustration-e-waste-in-recycling-bin.jpg") no-repeat !important;
         background-size: 90% !important;
         background-position: right 40% center !important;
         -webkit-box-pack: center !important;
@@ -16,7 +16,7 @@ body {
 .bursts-hero {
     height: 100vh;
     text-align: center;
-    background: url("img/background.svg") no-repeat;
+    background: url("img/depositphotos_72702831-stock-illustration-e-waste-in-recycling-bin.jpg") no-repeat;
     background-size: 195%;
     background-position: top 25% center;
     display: -moz-flex;
