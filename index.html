@@ -1,0 +1,90 @@
+<head>
+    <title>{% block title %} Zage {% endblock %}</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{% static 'js/zage.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/android-icon-48x48.png' %}"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand fixed-top">
+        <a href="{% url 'index' %}"><img class="navbar-brand" src="{% static 'img/logo4.png' %}" alt="jobnow" width="100px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="input-group">
+          <input type="search" class="form-control rounded" placeholder="Busca una oferta"/>
+          <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-4">
+
+                {% block navbar %}
+                    {% if not request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'we' %}">Nosotros</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'company_login' %}">Empresas</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Ingresar</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Regístrate</a></li>
+                    {% endif %}
+                {% endblock %}
+            </ul>
+        </div>
+    </nav>
+    <!-- END Navbar -->
+        {% if logout %}
+        <div class="modal" id="close_logout" tabindex="-1" role="dialog" style="display: block">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Cierre de sesión exitoso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close_logout_popup()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Se ha cerrado sesión exitosamente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endif %}
+    <section class="bursts-hero">
+    <div class="principal">
+        Encuentra <br> tu futuro
+    </div></section>
+    <div class="content">
+        
+    <div class="parent">
+            <div class="child">
+                <div class="card">
+                        <div class="company_logo">
+                            <img class="logo" src="{{ MEDIA_URL }}{{ p.logo }}">
+                        </div>
+                    <h4 class="card-title">{{ p.title }}</h4>
+                    <p class="card-text">{{ p.description }}</p>
+                    <p class="nav-link" style="text-align: right">Publicado el 15 de febrero</p>
+                    <a href="#" class="stretched-link"></a>
+                </div>
+            </div>
+    </div>
+    </div>
+    <div class="end">
+        {% block end_content %}
+            <div class="end_section">
+            Contacto: contact@zage.cl<br><br>
+            by Phoenix LATAM
+            </div>
+        {% endblock %}
+    </div>
+</body>
