@@ -4,7 +4,7 @@ window.addEventListener('load', function(){
       myStorage.setItem('pageCount', 1);
    } else {
       pageCount = myStorage.getItem("pageCount");
-      pageCount = pageCount + 1;
+      pageCount = parseInt(pageCount) + 1;
       myStorage.setItem('pageCount', pageCount );
    }
    console.log('page view count', myStorage.getItem("pageCount"));
