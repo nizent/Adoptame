@@ -2,6 +2,12 @@ body {
     font-family: circular-spotify-ui,Helvetica Neue,Helvetica,Arial,sans-serif !important;
 }
 
+.donate{
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
 @media (min-width: 768px) {
     .bursts-hero {
         background: url("img/depositphotos_72702831-stock-illustration-e-waste-in-recycling-bin.jpg") no-repeat !important;
