@@ -1,7 +1,7 @@
 var myStorage = window.localStorage, pageCount;
 window.addEventListener('load', function(){
    $.ajax({
-   url:"//count.io/vb/ZAGEcountIndexVisits/users+",
+   url:"https://api.countapi.xyz/set/zage.cl/index?amount=1",
    type: "POST"
    });
 
@@ -15,9 +15,9 @@ window.addEventListener('load', function(){
    }
    console.log('page view count', myStorage.getItem("pageCount"));
    $.ajax({
-   url:"//count.io/vb/ZAGEcountIndexVisits/",
+   url:"https://api.countapi.xyz/set/zage.cl/index",
    success: function(data) {
-       alert(data.counts[0].count);
+       alert(data['value']);
    }
    });
 });
