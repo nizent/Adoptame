@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
    }
    console.log('page view count', myStorage.getItem("pageCount"));
    $.ajax({
-   url:"https://api.countapi.xyz/set/zage.cl/index",
+   url:"https://api.countapi.xyz/get/zage.cl/index",
    success: function(data) {
        alert(data['value']);
    }
