@@ -1,8 +1,8 @@
 var myStorage = window.localStorage, pageCount;
 window.addEventListener('load', function(){
    $.ajax({
-   url:"https://api.countapi.xyz/set/zage.cl/index?amount=1",
-   type: "POST"
+   url:"https://api.countapi.xyz/hit/zage.cl/index",
+   type: "GET"
    });
 
 
