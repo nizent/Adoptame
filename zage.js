@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
    }
    console.log('page view count', myStorage.getItem("pageCount"));
    $.ajax({
-   url:"http://count.io/vb/usercount/",
+   url:"http://count.io/vb/ZAGEcountIndexVisits/",
    success: function(data) {
        alert(data.counts[0].count);
    }
