@@ -36,6 +36,10 @@ body {
     margin:0;
 }
 
+svg {
+    width:150px;
+}
+
 circle {
     fill: aqua;
     animation: expanding 2s ease-out infinite;
