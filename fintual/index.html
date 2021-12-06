@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fintual</title>
+    <script src="fintual/fintual.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href='img/android-icon-48x48.png'/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+</head>
+<body>
+<h2 class="navbar">Algunas cosas choras</h2>
+<h5 class="navbar font-italic text-secondary">Si ponen un horizonte muy grande de tiempo va a demorar mucho (Se ejecuta 1 solo thread)</h5>
+<div class="d-flex flex-row">
+    <div class="card-body align-content-center">
+        <label for="formulario_share_value" class="card-title">
+            <h3 class="text-primary">Valor cuota en el tiempo:</h3>
+        </label>
+        <form id="formulario_share_value" onsubmit="" method="post"
+              class="formulario_share_value">
+            <div class="my-3">
+                <label for="inicio" class="form-label">Fecha inicial:</label>
+                <input id="inicio" name="inicio" class="form-control" type="date" value="2021-11-01" onchange="updateShareValue()">
+            </div>
+            <div class="my-3">
+                <label for="fin" class="form-label">Fecha final:</label>
+                <input id="fin" name="fin" class="form-control" type="date" value="2021-11-30" onchange="updateShareValue()">
+            </div>
+        </form>
+    </div>
+    <div class="card-body">
+        <canvas id="shareValue" width="400"></canvas>
+        <script>
+            updateShareValue();
+        </script>
+    </div>
+</div>
 
+<div class="d-flex flex-row">
+    <div class="card-body align-content-center">
+        <label for="formulario_share_value" class="card-title">
+            <h3 class="text-success">Rentabilidad en el tiempo:</h3>
+        </label>
+        <div class="my-3">
+            <label for="fondo" class="form-label">Fondo:</label>
+            <select id="fondo" name="fondo" class="form-control" onchange="updateProfitability()">
+                <option value="186">Risky Norris</option>
+                <option value="15077">Very Conservative Streep</option>
+                <option value="188">Conservative Clooney</option>
+                <option value="187">Moderate Pit</option>
+            </select>
+        </div>
+        <form id="formulario_profit_value" onsubmit="" method="post"
+              class="formulario_profit_value">
+            <div class="my-3">
+                <label for="inicio_prof" class="form-label">Fecha inicial:</label>
+                <input id="inicio_prof" name="inicio_prof" class="form-control" type="date" value="2021-11-01" onchange="updateProfitability()">
+            </div>
+            <div class="my-3">
+                <label for="fin_prof" class="form-label">Fecha final:</label>
+                <input id="fin_prof" name="fin_prof" class="form-control" type="date" value="2021-11-30" onchange="updateProfitability()">
+            </div>
+        </form>
+    </div>
+    <div class="card-body">
+        <canvas id="shareValue_prof" width="400"></canvas>
+        <script>
+            updateProfitability();
+        </script>
+    </div>
+</div>
+</body>
+</html>
